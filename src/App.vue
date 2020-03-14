@@ -1,32 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header></Header>
+    <Tab></Tab>
+    <!-- keep-alive 缓存页面  include="recommend"表示保存recommend组件的缓存-->
+    <keep-alive include="recommend,singer">
+      <router-view></router-view>
+    </keep-alive>
+    <!-- 播放器页面 -->
+    <Player></Player>
   </div>
 </template>
-
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Header from './components/Header'
+import Tab from './components/Tap/'
+import Player from 'components/Player'
+// import Banner from './components/Banner'
+export default {
+  components: {Header,Tab,Player}
 }
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style lang="less" scoped>
+@import '~style/index.less';
+#app{
+  background: @bgcolors;
+  .w(375);
+  height: 100vh;  // vh为视高
 }
 </style>
