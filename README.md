@@ -1,4 +1,4 @@
-# nz1918-music
+# vue-Music
 
 ## Project setup
 ```
