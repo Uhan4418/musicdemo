@@ -35,24 +35,24 @@ let getSingersData = () => {
 }
 // 获取歌手歌单 
 let getSongByMid = (singermid) => {
-  let url = '/xixi/fcj/music/songListById'
+  let url = '/recommend/music/api/getPurlUrl'
   return axios.post(url,{singermid})
 }
 // 根据mids获取播放的url地址    
 let getSongUrlByMid = (mids)=>{
-  let url = '/xixi/fcj/music/songurl'
+  let url = '/recommend/music/api/songurl'
   return axios.post(url,{mids})
 }
 // 根据mid获取歌词
 let getLyricByMid = (songmid)=>{
-  let url = '/xixi/fcj/music/lyric'
+  let url = '/recommend/music/api/lyric'
   return axios.post(url,{songmid})
 }
   
 /***********************************排行*************************************/
 // 获取toprank排行歌单
 let getTopRank = () => {
-  let url = '/xixi/fcj/music/topRank'
+  let url = '/recommend/music/api/topRank'
   return new Promise((resolve,reject)=>{
     axios.get(url)
     .then((res)=>{resolve(res)})
