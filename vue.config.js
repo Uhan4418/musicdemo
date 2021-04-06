@@ -18,14 +18,14 @@ module.exports = {
         }
       },
 
-      // 接口小暗号
-      '/xixi':{
-        target:'http://47.95.207.1:3000',  //要转发的目标网址
-        changeOrigin:true,
-        pathRewrite:{
-          '^/xixi':''  // 将路径中多余的暗号删除
-        }
-      },
+      // // 接口小暗号
+      // '/xixi':{
+      //   target:'http://ustbhuangyi.com',  //要转发的目标网址
+      //   changeOrigin:true,
+      //   pathRewrite:{
+      //     '^/xixi':''  // 将路径中多余的暗号删除
+      //   }
+      // },
     }
   },
   // 绝对路径的别名

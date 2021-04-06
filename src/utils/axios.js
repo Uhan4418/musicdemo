@@ -5,7 +5,7 @@ import axios from 'axios'
 axios.interceptors.request.use(function (config) {
   // Do something before request is sent
   config.headers = {
-    'Content-Type':'application/x-www-form-urlencoded', //设置跨域头部
+    // 'Content-Type':'application/x-www-form-urlencoded', //设置跨域头部
     'X-XSRF-TOKEN': 'BavEFqmI-0nenzIMY2aClsbR8sVwQgqBY1Ho'
   };
   return config;

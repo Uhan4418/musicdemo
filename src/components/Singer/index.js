@@ -5,11 +5,12 @@ function normalData(data) {
   // let obj = {hot:[]};
   // 按照首字母进行分组
   for (let index = 0; index < data.length; index++) {
+    // console.log('#####',data[index])
     // 获取每一项数据中我们需要的数据(解构方式),通常命名与获取到的数据的键一致
-    let {Findex,Fother_name,Fsinger_mid,Fsinger_name} = data[index];
+    let {Findex,Fother_name,Fsinger_mid,Fsinger_name,Fsinger_id} = data[index];
     // 头像src地址
     let avator = `https://y.gtimg.cn/music/photo_new/T001R300x300M000${Fsinger_mid}.jpg?max_age=2592000`;
-    let singerItem = {Findex,Fother_name,Fsinger_mid,Fsinger_name,avator};
+    let singerItem = {Findex,Fother_name,Fsinger_mid,Fsinger_name,Fsinger_id,avator};
     // console.log(Findex);   // 打印每一项中的首字母
     // 将前10条数据加入到最热内部
     if (index < 10) {
