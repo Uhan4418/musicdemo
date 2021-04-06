@@ -17,6 +17,7 @@
 <script>
 import Swiper from "swiper";
 import { getBannerData } from "../../api/api";
+import {getCookie, setCookie} from '../../utils/utils'
 export default {
   data() {
     return {
@@ -53,6 +54,7 @@ export default {
       console.log("banner的URL:", res.data.slider)
       this.bannerUrls = res.data.slider;
     })
+    setCookie('_csrf','HR0cpcxljdmsb8LMpVpdaWm-')
   }
 };
 </script>

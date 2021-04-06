@@ -56,6 +56,7 @@ export default {
           spinnerType: "fading-circle"
         });
         getTopRank().then(res => {
+          console.log('res',res)
           this.toprankData = res.data.topList;
           // 告知better-scroll本次下拉刷新数据加载完毕
           this.bs.finishPullDown();
