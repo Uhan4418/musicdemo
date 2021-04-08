@@ -6,7 +6,9 @@
             v-for="(item,index) in bannerUrls" 
             :key="index">
           <!-- Bug:这里使用图片懒加载的话，轮播图从第二轮开始，第一张图片会渲染失败 -->
-          <img :src="item.picUrl" alt />
+          <a :href="item.linkUrl">
+            <img :src="item.picUrl" />
+          </a>
         </div>
       </div>
       <!-- 如果需要分页器 -->

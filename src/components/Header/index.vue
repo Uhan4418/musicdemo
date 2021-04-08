@@ -2,7 +2,7 @@
   <div class="header">
     <!-- 如果图片路径在public目录，直接用跟路径 -->
     <img src="/favicon.ico" alt="">
-    <span>NZ1918-MUSIC</span>
+    <span>vueMUSIC</span>
   </div>
 </template>
 
