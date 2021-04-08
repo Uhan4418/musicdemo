@@ -6,7 +6,6 @@ function resolve(dir){
 module.exports = {
   lintOnSave:false   ,//关闭eslint
   devServer:{
-    port: '8089',
     proxy:{  // 配置代理服务器 解决跨域问题 
       // 接口小暗号
       '/recommend':{

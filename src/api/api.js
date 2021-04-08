@@ -36,7 +36,8 @@ let getSingersData = () => {
 // 获取歌手歌单 
 let getSongByMid = (singermid) => {
   let url = '/recommend/music/api/getPurlUrl'
-  return axios.post(url,{singermid})
+  let data = {"comm":{"g_tk":5381,"inCharset":"utf-8","outCharset":"utf-8","notice":0,"format":"json","platform":"h5","needNewCode":1,"uin":0},"req_0":{"module":"vkey.GetVkeyServer","method":"CgiGetVkey","param":{"guid":"5598110184","songmid":["004EQ5TI0LEEB1","004295Et37taLD","004TXEXY2G2c7C","002CxSLT41D5tD","002kADrZ01iC2L","002ASCKm3ROw7t","002E8ebM3TFWmA","001IpbDW34m1Gy","001N8e5Q4Gjxda","0003y8uR1ZZwOI","003UTRfZ12wGOs","003gUMnj3mMwLZ","003S9N4440oFia","000fVqPH1RjwS3","0026G2Lq3Cl7ig","002xJrk41r9sLM","001nUzRq0GgCVb","004JI7mA1UQeZq","001a69Fl3h6bpK","002gcuPM3LQpCi","0007d5i80vUk3T","001we6dR1XLuZi","000H3L9R1fk6DM","0018qunY0L4Bkx","003h3CYS3UxDB4","0005WAB54TCYSn","0016WpLN4UZbh5","000r1Ubp2B7ZEw","003vO9A54YxjYo","0013CxwQ4DRfLX","002mBdB70woebz","000Ri6op1gqtad","002mgwYN4RxXNu","004Y3RcQ0VmV4C","004gaUdP3lE49S","003U7jQQ02YVAv","003Ymecp1whcTB","0048mhhe1BXL5f","0020CMqs1PFDi6","0009n8YD3Nh2rR","000MPA994Kycat","001tzPHJ436zJl","003JlYgD1SvCYe","003yTXr93OYkOZ","000h8CmZ2JfJ7H","001v5cGT2hCYhU","003kO9Lk4BmU2h","003aHtmn1nqmvb","000yg6pd41Ysc5","004HNOFx4d3mYn","004JHZXa0fXVnz","003SGnx01dEnNe","001p1Z5Z3lrPlu","001Z0T1q2LM8gk","002fBuTJ1aYdLG","000qXLmI47rb6L","002ssmTH2yY3iA","000cGUnW3azlVp","0035cAWK49CSs1","001EZ44F0uQpa9","0040RaUO0ikL7O","002Qmuly4WD0XL","0019gCB61VcvH2","000i43bi30YXVC","0049t0gc2joqxK","004TJkeL0SWB14","002UOAa532RbLc","004DqnTq3xUhHR","003AG12Y1oFqpv","004FM95l1lCIOL","000tZXOL1ElC7y"],"songtype":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"uin":"0","loginflag":0,"platform":"23"}}}
+  return axios.post(url,{...data})
 }
 // 根据mids获取播放的url地址    
 let getSongUrlByMid = (mids)=>{

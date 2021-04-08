@@ -89,6 +89,7 @@ export default {
       let result = [];
       let mids = [];
       result = list.map((item,index)=>{
+        console.log('###',item)
         let {albummid,albumname,singer,songmid,songname} = item.musicData
         let albumUrl = `https://y.gtimg.cn/music/photo_new/T002R300x300M000${albummid}.jpg?max_age=2592000`
         mids.push(songmid)
@@ -102,6 +103,7 @@ export default {
     let {singermid} = this.$route.params
     // 根据歌手mid发起请求获取数据
     let data = await getSongByMid(singermid)
+    console.log("&&",data)
     let {result,mids} = this.handleList(data.data.list)
     // 获取url数据 通过mids 歌曲的媒体id 换成音乐地址 之后将数据进行合并
     let {urls} = await getSongUrlByMid(mids)
